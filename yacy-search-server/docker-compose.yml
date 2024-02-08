@@ -12,7 +12,7 @@ services:
     restart: on-failure
     stop_grace_period: 1m
     ports:
-      - "2798:8090"
+      - "2799:8090"
       - "8443:8443"
     volumes:
        - ${APP_DATA_DIR}/data:/opt/yacy_search_server/DATA
