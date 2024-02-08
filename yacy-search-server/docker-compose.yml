@@ -7,7 +7,7 @@ services:
       APP_PORT: 2802
   
   web:
-    image: yacy/yacy_search_server:latest
+    image: aveygospam/yacy-search-server:latest
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
