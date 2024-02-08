@@ -1,12 +1,12 @@
 version: "3.7"
 
-volumes:
-  yacy_data:
-    driver: local
-    driver_opts:
-      type: none
-      device: /data
-      o: bind
+#volumes:
+#  yacy_data:
+#    driver: local
+#    driver_opts:
+#      type: none
+#      device: .${APP_DATA_DIR}/data
+#      o: bind
 
 services:
   app_proxy:
@@ -21,9 +21,8 @@ services:
     stop_grace_period: 1m
     ports:
       - "2802:8090"
-      - "8443:8443"
     volumes:
-      - yacy_data:/app
+      - ${APP_DATA_DIR}/app:/app
 
     environment:
       YACY_DATA_PATH: /app/yacy/
