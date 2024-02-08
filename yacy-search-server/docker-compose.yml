@@ -15,14 +15,12 @@ services:
       APP_PORT: 2802
   
   web:
-    image: aveygospam/yacy-search-server:latest
-    user: "1000:1000"
+    #image: aveygospam/yacy-search-server:latest
+    image: yacy/yacy_search_server:latest
+    #user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
     ports:
       - "2802:8090"
     volumes:
-      - ${APP_DATA_DIR}/app:/app
-
-    environment:
-      YACY_DATA_PATH: /app/yacy/
+      - ${APP_DATA_DIR}/data:/opt/yacy_search_server/DATA
