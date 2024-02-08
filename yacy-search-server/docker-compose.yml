@@ -17,3 +17,4 @@ services:
        - ${APP_DATA_DIR}/data:/opt/yacy_search_server/DATA
 
     environment:
+      PORT: 8535
