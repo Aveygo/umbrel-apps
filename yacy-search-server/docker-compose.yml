@@ -8,14 +8,14 @@ services:
   
   web:
     image: aveygospam/yacy-search-server:latest
-    user: "1000:1000"
+    user: "1000:0"
     restart: on-failure
     stop_grace_period: 1m
     ports:
       - "2802:8090"
     #  - "8443:8443"
     volumes:
-       - /build:${APP_DATA_DIR}/data
+       - ${APP_DATA_DIR}/yacy:/build/yacy
 
     environment:
       UID: "1000"
