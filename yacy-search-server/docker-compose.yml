@@ -15,7 +15,7 @@ services:
       - "2802:8090"
     #  - "8443:8443"
     volumes:
-       - ${APP_DATA_DIR}/build:/opt/
+       - ${APP_DATA_DIR}/build:/
 
     environment:
       UID: "1000"
