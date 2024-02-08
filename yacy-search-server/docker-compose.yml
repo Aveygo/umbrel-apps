@@ -1,12 +1,12 @@
 version: "3.7"
 
-#volumes:
-#  yacy_data:
-#    driver: local
-#    driver_opts:
-#      type: none
-#      device: .${APP_DATA_DIR}/data
-#      o: bind
+volumes:
+  yacy_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /data
+      o: bind
 
 services:
   app_proxy:
@@ -19,8 +19,14 @@ services:
     image: yacy/yacy_search_server:latest
     #user: "1000:1000"
     restart: on-failure
+    
+    logging:
+      options:
+        max-size: "200m"
+        max-file: "2"
+
     stop_grace_period: 1m
     ports:
       - "2802:8090"
     volumes:
-      - ${APP_DATA_DIR}/data:/opt/yacy_search_server/DATA
+      - yacy_data:/opt/yacy_search_server/DATA
