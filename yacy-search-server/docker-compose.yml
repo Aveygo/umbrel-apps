@@ -16,7 +16,7 @@ services:
       - "2802:8090"
     #  - "8443:8443"
     volumes:
-       - ${APP_DATA_DIR}/yacy:/build/yacy
+       - ${APP_DATA_DIR}/build:/build
 
     environment:
       #UID: "1000"
