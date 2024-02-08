@@ -16,9 +16,9 @@ services:
       - "2802:8090"
     #  - "8443:8443"
     volumes:
-       - ${APP_DATA_DIR}:/build
+       - ${APP_DATA_DIR}:/app
 
     environment:
       #UID: "1000"
       #GID: "1000"
-      YACY_DATA_PATH: /build/yacy/
+      YACY_DATA_PATH: /app/yacy/
