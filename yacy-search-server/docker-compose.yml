@@ -29,4 +29,5 @@ services:
     ports:
       - "2802:8090"
     volumes:
-      - yacy_data:/opt/yacy_search_server/DATA
+      #- yacy_data:/opt/yacy_search_server/DATA
+      - ${APP_DATA_DIR}/data:/opt/yacy_search_server/DATA
