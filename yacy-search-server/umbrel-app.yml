@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: yacy-search-server
+category: networking
+name: YaCy Search Server
+version: "1.924"
+tagline: The YaCy Peer-to-Peer Search Engine Software
+description: >-
+  The YaCy search engine software provides results from a network of independent peers, instead of a central server. 
+  It is a distributed network where no single entity decides what to list or order it appears in.
+  User privacy is central to YaCy, and it runs on each user's computer, where search terms are hashed before they being sent to the network. 
+  Everyone can create their individual search indexes and rankings, and a truly customized search portal.
+
+  Not an *official* release - Created by @Aveygo, hope it suits your needs.
+releaseNotes: >-
+  Init
+developer: orbiterlab
+website: https://yacy.net/
+dependencies:
+repo: https://github.com/yacy/yacy_search_server
+support: https://github.com/yacy/yacy_search_server/discussions
+port: 8090
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: Aveygo
+submission:

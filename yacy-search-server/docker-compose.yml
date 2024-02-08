@@ -1,0 +1,27 @@
+version: "1.924"
+
+services:
+  app_proxy:
+    environment:
+      # <app-id>_<web-container-name>_1
+      # e.g. 'btc-rpc-explorer_web_1'
+      # Note that the '_1' at the end is needed
+      APP_HOST: yacy-search-server_web_1
+      APP_PORT: 8090
+  
+  web:
+    image: yacy/yacy_search_server:latest
+    restart: on-failure
+    stop_grace_period: 1m
+    ports:
+      # Replace <port> with the port that your app's web server
+      # is listening inside the Docker container. If you need to
+      # expose more ports, add them below.
+      - "8090:8090"
+      - "8443:8443"
+    volumes:
+      # Uncomment to mount your data directories inside
+      # the Docker container for storing persistent data
+       - ${APP_DATA_DIR}/data:/opt/yacy_search_server/DATA
+
+    environment:
