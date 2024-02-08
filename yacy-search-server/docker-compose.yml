@@ -9,14 +9,14 @@ services:
   web:
     image: aveygospam/yacy-search-server:latest
     #command: [ "/build/yacy/startYACY.sh", "-f" ]
-    user: "1000:1000"
+    #user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
     ports:
       - "2802:8090"
     #  - "8443:8443"
     volumes:
-       - ${APP_DATA_DIR}/build:/build
+       - ${APP_DATA_DIR}:/build
 
     environment:
       #UID: "1000"
