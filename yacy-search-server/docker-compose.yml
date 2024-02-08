@@ -4,15 +4,15 @@ services:
   app_proxy:
     environment:
       APP_HOST: yacy-search-server_web_1
-      APP_PORT: 2795
+      APP_PORT: 2797
   
   web:
     image: yacy/yacy_search_server:latest
-    
+    user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
     ports:
-      - "2795:8090"
+      - "2797:8090"
       - "8443:8443"
     volumes:
        - ${APP_DATA_DIR}/data:/opt/yacy_search_server/DATA
