@@ -25,7 +25,7 @@ website: https://yacy.net/
 dependencies:
 repo: https://github.com/yacy/yacy_search_server
 support: https://github.com/yacy/yacy_search_server/discussions
-port: 2795
+port: 2796
 gallery:
   - 1.jpg
   - 2.jpg
