@@ -4,17 +4,17 @@ services:
   app_proxy:
     environment:
       APP_HOST: yacy-search-server_web_1
-      APP_PORT: 8535
+      APP_PORT: 8937
   
   web:
     image: yacy/yacy_search_server:latest
     restart: on-failure
     stop_grace_period: 1m
     ports:
-      - "8535:8090"
+      - "8937:8090"
       - "8443:8443"
     volumes:
        - ${APP_DATA_DIR}/data:/opt/yacy_search_server/DATA
 
     environment:
-      PORT: 8535
+      PORT: 8937
