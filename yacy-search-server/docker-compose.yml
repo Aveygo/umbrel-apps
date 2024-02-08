@@ -1,5 +1,13 @@
 version: "3.7"
 
+volumes:
+  yacy_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: .${APP_DATA_DIR}/data
+      o: bind
+
 services:
   app_proxy:
     environment:
@@ -8,17 +16,14 @@ services:
   
   web:
     image: aveygospam/yacy-search-server:latest
-    #command: [ "/build/yacy/startYACY.sh", "-f" ]
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
     ports:
       - "2802:8090"
-    #  - "8443:8443"
+      - "8443:8443"
     volumes:
-      - ${APP_DATA_DIR}/data:/app
+      - yacy_data:/app
 
     environment:
-      #UID: "1000"
-      #GID: "1000"
       YACY_DATA_PATH: /app/yacy/
