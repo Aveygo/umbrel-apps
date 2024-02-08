@@ -7,7 +7,7 @@ services:
       APP_PORT: 2802
   
   web:
-    image: aveygospam/yacy-search-server:latest
+    image: yacy/yacy_search_server:latest
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
@@ -15,9 +15,8 @@ services:
       - "2802:8090"
     #  - "8443:8443"
     volumes:
-       - ${APP_DATA_DIR}/yacy:/build/yacy
+       - ${APP_DATA_DIR}/build:/opt/
 
     environment:
       UID: "1000"
       GID: "1000"
-      YACY_DATA_PATH: /build/yacy/data
