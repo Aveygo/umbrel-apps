@@ -12,7 +12,14 @@ description: >-
 
   Not an *official* release - Created by @Aveygo, hope it suits your needs.
 releaseNotes: >-
-  Init
+  [Dec 21, 2023] turkish translation tr.lng
+  https://github.com/yacy/yacy_search_server/pull/621
+
+  [Dec 10, 2023] bring defaults for recrawlindex to init config
+  https://github.com/yacy/yacy_search_server/pull/619
+
+  [Dec 4, 2023] Logging unclutter
+  https://github.com/yacy/yacy_search_server/pull/615
 developer: orbiterlab
 website: https://yacy.net/
 dependencies:
