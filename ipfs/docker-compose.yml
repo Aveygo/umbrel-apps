@@ -1,0 +1,22 @@
+version: "2.1"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: ipfs_app_1
+      APP_PORT: 80
+  app:
+    image: lscr.io/linuxserver/ipfs
+    container_name: ipfs
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - ${APP_DATA_DIR}/config:/config
+    ports:
+      - 80:80
+      - 4001:4001
+      - 5001:5001
+      - 8080:8080
+      - 443:443
+    restart: unless-stopped

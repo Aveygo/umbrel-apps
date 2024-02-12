@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: ipfs
+category: networking
+name: IPFS
+version: "0"
+tagline: IPFS
+description: >-
+  IPFS
+releaseNotes: >-
+  IPFS
+developer: IPFS
+website: IPFS
+dependencies:
+repo: IPFS
+support: IPFS
+port: 2810
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: "IPFS"
+defaultPassword: "IPFS"
+submitter: IPFS
+submission:
