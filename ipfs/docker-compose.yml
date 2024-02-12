@@ -14,9 +14,9 @@ services:
     volumes:
       - ${APP_DATA_DIR}/config:/config
     ports:
-      - 80:80
-      - 4001:4001
-      - 5001:5001
-      - 8080:8080
-      - 443:443
+      - 2811:80
+      - 2812:4001
+      - 2813:5001
+      - 2814:8080
+      - 2815:443
     restart: unless-stopped
